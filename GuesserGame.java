@@ -88,5 +88,7 @@ class GuesserGame{
         u.collectFromGuesser();
         u.collectFromPlayer();
         u.compare();
+
+        System.out.println("first Round is complete.");
     }
 }
