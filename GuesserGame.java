@@ -3,21 +3,87 @@ class Guesser{
     int guessNum;
 
     int guessNum(){
-        System.out.print("Guesser kindly guess a number : ");
+        
         Scanner g = new Scanner(System.in);
-        guessNum = g.nextInt();
+        int a;
+        while(true){
+            System.out.print("Guesser kindly guess a number between 1-10 : ");
+            a = g.nextInt();
+            if(a>0 & a<11){
+                guessNum = a;
+                break;
+            }
+            else{
+                System.out.println("Invalid Number! Please enter between 1 - 10");
+            }
+
+    }
         return guessNum;
     }
 }
 
-class Player{
+class Player1{
     int guessNum;
 
     int guessNum(){
-
-        System.out.print("player kindly guess a number : ");
+        
         Scanner p = new Scanner(System.in);
-        guessNum = p.nextInt();
+        int a;
+        while(true){
+            System.out.print("player_1 kindly guess a number between 1-10 : ");
+            a = p.nextInt();
+            if(a>0 & a<11){
+                guessNum = a;
+                break;
+            }
+            else{
+                System.out.println("Invalid Number! Please enter between 1 - 10");
+            }
+        }
+        return guessNum;
+    }
+}
+
+class Player2{
+    int guessNum;
+
+    int guessNum(){
+        
+        Scanner p = new Scanner(System.in);
+        int a;
+        while(true){
+            System.out.print("player_2 kindly guess a number between 1-10 : ");
+            a = p.nextInt();
+            if(a>0 & a<11){
+                guessNum = a;
+                break;
+            }
+            else{
+                System.out.println("Invalid Number! Please enter between 1 - 10");
+            }
+        }
+        return guessNum;
+    }
+}
+
+class Player3{
+    int guessNum;
+
+    int guessNum(){
+        
+        Scanner p = new Scanner(System.in);
+        int a;
+        while(true){
+            System.out.print("player_3 kindly guess a number between 1-10 : ");
+            a = p.nextInt();
+            if(a>0 & a<11){
+                guessNum = a;
+                break;
+            }
+            else{
+                System.out.println("Invalid Number! Please enter between 1 - 10");
+            }
+        }
         return guessNum;
     }
 }
@@ -28,21 +94,22 @@ class Umpire{
     int numFromPlayer2;
     int numFromPlayer3;
 
-     void collectFromGuesser(){
+    void collectFromGuesser(){
         Guesser guesser = new Guesser();
         numFromGuesser = guesser.guessNum(); 
-     }
 
-     void collectFromPlayer(){
-        Player p1 = new Player();
-        Player p2 = new Player();
-        Player p3 = new Player();
+    }
+
+    void collectFromPlayer(){
+        Player1 p1 = new Player1();
+        Player2 p2 = new Player2();
+        Player3 p3 = new Player3();
 
         numFromPlayer1 = p1.guessNum();
         numFromPlayer2 = p2.guessNum();
         numFromPlayer3 = p3.guessNum();
 
-     }
+    }
 
     void compare(){
         if(numFromGuesser == numFromPlayer1){
